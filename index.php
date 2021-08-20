@@ -55,9 +55,7 @@
  <div class="form-floating">
 
   Animal: <select  name = "animal" class="form-select" id="animal" aria-label="Floating label select example">
-  
-  
-  <?php
+<?php
 
 
 for ($x = 0; $x < count($animais); $x++){
@@ -71,55 +69,45 @@ echo "<option value = '$index'>$animais[$x]</option>";
 
 
 }
-
   ?>
 
   </select>
 </div>
-
-
 <br>
 </fieldset>
-
 <br>
 <br>
 <input class="btn btn-primary" type="submit" value="Apostar" require>
-
-
-
-
-
-
 </form>
-
-
 <br>
-
 <?php
 
 if(isset($_POST["aposta"])){
 echo "Tipo:".$typeaposta."<br>";
 echo "Valor:".$aposta."<br>";
 echo "Milhar:".$numero."<br>";
-echo "Animal:".$animal."<br>"; 
+echo "Animal:".$animal."<br>"."<br>"; 
 
 
 $premios = sorteio();
 for($z=0;$z<5;$z++){
-  echo "<p>". $premios[$z] ." - ". separe($premios[$z]) ." - ". 
-  mostrarImagens(separe($premios[$z])) ." </p>";
+  $h = $z + 1;
+  
+  echo "<a style='float:left;'>$h ° Prêmio: ". $premios[$z] ." - ".
+   
+  mostrarImagens(separe($premios[$z])) ."</a><br><br>";
+  
 }
 
-if (renumerar($animal,$premios, $aposta) == 0){
-  echo "<p style='font-size: 20px;'> Que pena, você não ganhou </p>";
+if($typeaposta == "simples"){
+echo "Animal apostado: <br><br><br><br><br><br><img style='width: 10%;' src='imagens/$animal.png'";
+} else {
+  echo "Número apostado: $numero <br>";
 }
+echo renumerar($animal,$premios, $aposta, $typeaposta, $numero); 
 
 
-else{
-  echo "<p style='font-size: 20px;'> Parabéns, você ganhou o X prêmio o valor de R$
-  Y</p>";
 
-}
 
 
 }
