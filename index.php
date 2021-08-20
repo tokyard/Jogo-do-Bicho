@@ -100,7 +100,7 @@ for($z=0;$z<5;$z++){
 }
 
 if($typeaposta == "simples"){
-echo "Animal apostado: <br><br><br><br><br><br><img style='width: 10%;' src='imagens/$animal.png'";
+echo "<br><br><br><br><br><br>Animal apostado: <img style='width: 10%;' src='imagens/$animal.png'";
 } else {
   echo "Número apostado: $numero <br>";
 }
