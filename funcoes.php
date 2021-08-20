@@ -9,10 +9,7 @@ function sorteio (){
     }
 return $vetor;
 }
-
-
 function separe($premios){
-
 return substr ($premios, 2,4);
 }
 function mostrarImagens($premios){
@@ -68,18 +65,22 @@ echo "<img src = 'imagens/24.png'"."<br>";
 }else if ($premios == 97 || $premios == 98 || $premios == 99 || $premios == 00){
 echo "<img src = 'imagens/25.png'"."<br>";
 }
-                                                                                        
-
 }
 
-function renumerar($premios)
+function renumerar($aposta, $premios)
 {
-
-
-
-
-
-
+    if($aposta == $premios[0]){
+        $aposta = $aposta * 15; 
+    } else if ($aposta == $premios[1]){      
+          $aposta = $aposta * 5; 
+    } else if ($aposta == $premios[2]){      
+        $aposta = $aposta * 4; 
+    } else if ($aposta == $premios[3]){      
+        $aposta = $aposta * 3; 
+    } else if ($aposta == $premios[4]){      
+      $aposta = $aposta * 2; 
+    }
+    return $aposta;
 }
 
 ?>
