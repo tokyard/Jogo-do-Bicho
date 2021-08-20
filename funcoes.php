@@ -1,6 +1,5 @@
 <?php
 
-
 function sorteio (){
     $vetor = array ();
     for ($x = 0; $x < 5; $x++){
@@ -9,11 +8,12 @@ function sorteio (){
     }
 return $vetor;
 }
+
 function separe($premios){
-return substr ($premios, 2,4);
+    return substr($premios, 2,4);    
 }
+
 function mostrarImagens($premios){
-$animal = " ";
 if ($premios == 1 || $premios == 2 || $premios == 3 || $premios == 4){
 echo "<img src = 'imagens/01.png'"."<br>";
 }else if ($premios == 5 || $premios == 6 || $premios == 7 || $premios == 8){
@@ -65,22 +65,81 @@ echo "<img src = 'imagens/24.png'"."<br>";
 }else if ($premios == 97 || $premios == 98 || $premios == 99 || $premios == 00){
 echo "<img src = 'imagens/25.png'"."<br>";
 }
+
 }
 
-function renumerar($aposta, $premios)
-{
-    if($aposta == $premios[0]){
-        $aposta = $aposta * 15; 
-    } else if ($aposta == $premios[1]){      
-          $aposta = $aposta * 5; 
-    } else if ($aposta == $premios[2]){      
-        $aposta = $aposta * 4; 
-    } else if ($aposta == $premios[3]){      
-        $aposta = $aposta * 3; 
-    } else if ($aposta == $premios[4]){      
-      $aposta = $aposta * 2; 
+function renumerar($animal,$premios, $aposta){
+    $renum = array(); 
+    for($y=0; $y<5; $y++){
+    $renum[$y] = substr($premios[$y], 2, 4);
+    
+    if ($renum[$y] == 1 || $renum[$y] == 2 || $renum[$y] == 3 || $renum[$y] == 4){
+    $renum[$y] = 1; 
+    }else if ($renum[$y] == 5 || $renum[$y] == 6 || $renum[$y] == 7 || $renum[$y] == 8){
+    $renum[$y] = 2;
+    }else if ($renum[$y] == 9 || $renum[$y] == 10 || $renum[$y] == 11 || $renum[$y] == 12){
+    $renum[$y] = 3;
+    }else if ($renum[$y] == 13 || $renum[$y] == 14 || $renum[$y] == 15 || $renum[$y] == 16){
+    $renum[$y] = 4;
+    }else if ($renum[$y] == 17 || $renum[$y] == 18 || $renum[$y] == 19 || $renum[$y] == 20){
+    $renum[$y] = 5;
+    }else if ($renum[$y] == 21 || $renum[$y] == 22 || $renum[$y] == 23 || $renum[$y] == 24){
+    $renum[$y] = 6;
+    }else if ($renum[$y] == 25 || $renum[$y] == 26 || $renum[$y] == 27 || $renum[$y] == 28){
+    $renum[$y] = 7;
+    }else if ($renum[$y] == 29 || $renum[$y] == 30 || $renum[$y] == 31 || $renum[$y] == 32){
+    $renum[$y] = 8;
+    }else if ($renum[$y] == 33 || $renum[$y] == 34 || $renum[$y] == 35 || $renum[$y] == 36){
+    $renum[$y] = 9;
+    }else if ($renum[$y] == 37 || $renum[$y] == 38 || $renum[$y] == 39 || $renum[$y] == 40){
+    $renum[$y] = 10;
+    }else if ($renum[$y] == 41 || $renum[$y] == 42 || $renum[$y] == 43 || $renum[$y] == 44){
+    $renum[$y] = 11;
+    }else if ($renum[$y] == 45 || $renum[$y] == 46 || $renum[$y] == 47 || $renum[$y] == 48){
+    $renum[$y] = 12;
+    }else if ($renum[$y] == 49 || $renum[$y] == 50 || $renum[$y] == 51 || $renum[$y] == 52){
+    $renum[$y] = 13;
+    }else if ($renum[$y] == 53 || $renum[$y] == 54 || $renum[$y] == 55 || $renum[$y] == 56){
+    $renum[$y] = 14;
+    }else if ($renum[$y] == 57 || $renum[$y] == 58 || $renum[$y] == 59 || $renum[$y] == 60){
+    $renum[$y] = 15;
+    }else if ($renum[$y] == 61 || $renum[$y] == 62 || $renum[$y] == 63 || $renum[$y] == 64){
+    $renum[$y] = 16;
+    }else if ($renum[$y] == 65 || $renum[$y] == 66 || $renum[$y] == 67 || $renum[$y] == 68){
+    $renum[$y] = 17;
+    }else if ($renum[$y] == 69 || $renum[$y] == 70 || $renum[$y] == 71 || $renum[$y] == 72){
+    $renum[$y] = 18;
+    }else if ($renum[$y] == 73 || $renum[$y] == 74 || $renum[$y] == 75 || $renum[$y] == 76){
+    $renum[$y] = 19;
+    }else if ($renum[$y] == 77 || $renum[$y] == 78 || $renum[$y] == 79 || $renum[$y] == 80){
+    $renum[$y] = 20;
+    }else if ($renum[$y] == 81 || $renum[$y] == 82 || $renum[$y] == 83 || $renum[$y] == 84){
+    $renum[$y] = 21;
+    }else if ($renum[$y] == 85 || $renum[$y] == 86 || $renum[$y] == 87 || $renum[$y] == 88){
+    $renum[$y] = 22;
+    }else if ($renum[$y] == 89 || $renum[$y] == 90 || $renum[$y] == 91 || $renum[$y] == 92){
+    $renum[$y] = 23;
+    }else if ($renum[$y] == 93 || $renum[$y] == 94 || $renum[$y] == 95 || $renum[$y] == 96){
+    $renum[$y] = 24;
+    }else if ($renum[$y] == 97 || $renum[$y] == 98 || $renum[$y] == 99 || $renum[$y] == 00){
+    $renum[$y] = 25;
     }
+    }
+     
+        if($animal == $renum[0]){
+            $aposta = $aposta * 15; 
+        } else if ($animal == $renum[1]){      
+            $aposta = $aposta * 5; 
+        } else if ($animal == $renum[2]){      
+            $aposta = $aposta * 4; 
+        } else if ($animal == $renum[3]){      
+            $aposta = $aposta * 3; 
+        } else if ($animal == $renum[4]){      
+            $aposta = $aposta * 2;
+        } else {
+            $aposta = 0;
+        }
     return $aposta;
-}
+    }
 
 ?>
