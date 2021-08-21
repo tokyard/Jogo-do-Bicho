@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Josefin+Sans:wght@600&family=Teko:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&family=Source+Serif+Pro:ital,wght@1,600&display=swap');
+
+body{
+
+background-color: #222020;
+
+}
+
+ .aposta{
+
+color: rgb(231, 153, 129);
+font-family: 'Source Sans Pro', sans-serif;
+font-size: 23px;
+text-align: center;
+
+}
+
+.tipo{
+
+    color: rgb(168, 129, 231);
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 23px;
+text-align: center;
+    
+    }
+
+    .num{
+
+        color: rgb(226, 226, 206);
+        font-family: 'Alumni Sans', sans-serif;
+        font-size: 25px;
+    
+    }
+
+    
+
+.opcoes{
+
+    color: yellow;
+    font-family: 'Alumni Sans', sans-serif;
+    font-size: 25px;
+
+}
+
+
+
+a{
+
+color: aquamarine;
+font-family: 'Josefin Sans', sans-serif;
+font-size: 26px;
+
+
+}
+.title{
+
+color: snow;
+font-family: 'Archivo Narrow', sans-serif;
+text-align: center;
+
+}
+
+
+.aposta1{
+
+color:skyblue;
+font-family: 'Josefin Sans', sans-serif;
+font-size: xx-large;
+
+
+}
+
+.loser {
+
+color: red;
+font-family: 'Pathway Gothic One', sans-serif;
+font-size: 70px;
+
+
+
+}
+
+
+.winner {
+
+    color: blue;
+    font-family: 'Pathway Gothic One', sans-serif;
+    font-size: 70px;
+    
+    
+    
+    }
+
+    h5{
+
+color: azure;
+font-family: 'Source Serif Pro', serif;
+    }

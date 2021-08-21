@@ -1,3 +1,5 @@
+ <link rel="stylesheet" type="text/css" href="csscelio/csscelio.css" media="screen" />
+
 <?php
 
 function sorteio (){
@@ -174,9 +176,9 @@ function renumerar($animal,$premios, $aposta, $tipo, $numero){
 
 
     if($aposta != 0){
-        $frase = "Parabéns, você ganhou o $numPremio prêmio o valor de R$ $aposta". "<br>";
+        $frase = " <br>". "<div class = 'winner'>"."Parabéns, você ganhou o $numPremio prêmio o valor de R$ $aposta". "</div>"."<br>";
     } else {
-        $frase = "Que pena, você não ganhou";
+        $frase = "<br>"."<div class = 'loser'>"."Que pena, você não ganhou". "</div>";
     }
     
     

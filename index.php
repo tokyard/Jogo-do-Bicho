@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <link rel="stylesheet" type="text/css" href="csscelio/csscelio.css" media="screen" />
     <?php 
       include 'funcoes.php';
       $title = "Jogo do Bicho";
@@ -16,33 +17,38 @@
     <title><?php echo $title; ?></title>
   </head>
 <body>
+  <h1 class="title"> JOGO DO BICHO (É UMA CONTRAVENÇÃO PENAL!)</h1>
   <form method="post">
     <fieldset>
-      <legend>Aposta</legend> 
+      <legend class="aposta"><h4>Aposta</h4></legend> 
 <div class="form-check">
+<div class = "opcoes">
   <input class="form-check-input" type="radio" name="type" id="type" value = "simples" <?php if ($typeaposta == "simples") echo "checked"; ?>>
   <label class="form-check-label" for="flexRadioDefault1">
-  Grupo Simples
+  Grupo Simples </div>
   </label>
 </div>
+<div class = "opcoes">
 <div class="form-check">
   <input class="form-check-input" type="radio" name="type" id="type" value = "milhar" <?php if ($typeaposta == "milhar") echo "checked"; ?>>
   <label class="form-check-label" for="flexRadioDefault2">
-  Milhar
+  Milhar </div>
   </label>
 </div>
 <br><br>
-<i>Valor da Aposta em R$:</i><input type="aposta" name = "aposta"  value = "<?php echo $aposta; ?>"><br><br>
-    </fieldset>
+<div class = "opcoes">
+<i>Valor da Aposta em R$: </i><input type="aposta" name = "aposta"  value = "<?php echo $aposta; ?>"><br><br>
+</div> </fieldset>
+
 <br>
   <fieldset>
 
-<legend><h4>Milhar</h4> </legend>
+<legend class="tipo"><h4>Milhar</h4> </legend>
 
 
-  <br> 
-<input type="name" name = "numero" value = "<?php echo $numero; ?>" maxlength="4"><br><br>
-
+<div class = "num">
+Número da aposta: <input type="name" name = "numero" value = "<?php echo $numero; ?>" maxlength="4"><br><br>
+</div>
 
 </fieldset>
 
@@ -50,11 +56,12 @@
 
 
 <fieldset> 
-  <legend> <h4>Grupo Simples</h4> </legend>
+  <legend class="tipo"> <h4>Grupo Simples</h4> </legend>
 
  <div class="form-floating">
-
-  Animal: <select  name = "animal" class="form-select" id="animal" aria-label="Floating label select example">
+<div class="num">
+  Animal:  <select  name = "animal" class="form-select" id="animal" aria-label="Floating label select example">
+</div>
 <?php
 
 
@@ -77,33 +84,32 @@ echo "<option value = '$index'>$animais[$x]</option>";
 </fieldset>
 <br>
 <br>
+
 <input class="btn btn-primary" type="submit" value="Apostar" require>
 </form>
 <br>
 <?php
 
 if(isset($_POST["aposta"])){
-echo "Tipo:".$typeaposta."<br>";
-echo "Valor:".$aposta."<br>";
-echo "Milhar:".$numero."<br>";
-echo "Animal:".$animal."<br>"."<br>"; 
 
+  echo "<br>"."<br>";
 
 $premios = sorteio();
 for($z=0;$z<5;$z++){
   $h = $z + 1;
   
-  echo "<a style='float:left;'>$h ° Prêmio: ". $premios[$z] ." - ".
+  echo "<a style='float:left;'>$h ° Prêmio: ". $premios[$z] ." -  ".
    
   mostrarImagens(separe($premios[$z])) ."</a><br><br>";
   
 }
 
 if($typeaposta == "simples"){
-echo "<br><br><br><br><br><br>Animal apostado: <img style='width: 10%;' src='imagens/$animal.png'";
+echo "<br><br><br><br><br><br> <div class = 'aposta1'> Animal apostado: </div> <br> <img style='width: 10%;' src='imagens/$animal.png'<br><br><br>";
 } else {
-  echo "Número apostado: $numero <br>";
+  echo "<br> "."<div class = 'aposta1'> Número apostado: $numero <br></div>";
 }
+
 echo renumerar($animal,$premios, $aposta, $typeaposta, $numero); 
 
 
@@ -112,6 +118,8 @@ echo renumerar($animal,$premios, $aposta, $typeaposta, $numero);
 
 }
 ?>
+
+<h5>Por Célio Adriel</h5>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
